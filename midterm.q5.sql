@@ -17,3 +17,10 @@ INSERT INTO name_list values
 	( 'Steve Pen',           33, 'NJ' ),
 	( 'Laura Jean Alkinoos', 34, 'PA' )
 ;
+
+
+DELETE 
+FROM name_list a
+WHERE a.ctid <> (SELECT min(b.ctid)
+FROM name_list b
+WHERE a.real_name = b.real_name);
