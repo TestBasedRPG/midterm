@@ -9,7 +9,7 @@ CREATE TABLE if not exists invoice (
     invoice_id UUID NOT NULL DEFAULT uuid_generate_v4() primary key, 
     total decimal,
     tax decimal,
-    invoice_date time 
+    invoice_date timestamp 
 );
 
 CREATE INDEX invoice_id_i1 on invoice ( invoice_id );
