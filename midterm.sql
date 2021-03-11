@@ -21,11 +21,11 @@ CREATE TABLE if not exists address (
     addr_type varchar(20),
     customer_name text,
     zip_code text,
-    address_line​1 text,
-    address_line​2 text,
-    address_line​3 text,
+    address_line1 text,
+    address_line2 text,
+    address_line3 text,
     city text,
-    stat varchar(2),
+    state varchar(2),
     CONSTRAINT fkey_invoice
         FOREIGN KEY (invoice_id)  
             REFERENCES invoice(invoice_id) 
